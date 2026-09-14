@@ -1,1 +1,0 @@
-const d=loadData(),s=d.stats;$('#streakStat')&&( $('#streakStat').textContent=s.streak);$('#xpStat')&&( $('#xpStat').textContent=s.xp.toLocaleString('pt-BR'));$('#cardsStat')&&( $('#cardsStat').textContent=d.decks.reduce((n,x)=>n+x.cards.length,0));$('#accuracyStat')&&( $('#accuracyStat').textContent=s.accuracy==null?'—':s.accuracy+'%');renderDecks('#deckGrid',3);
