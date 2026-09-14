@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RECALL — Jogue. Aprenda. Evolua.</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div id="appShell" class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <a class="brand" href="index.html"><span class="brand-mark">R</span><span>RECALL</span></a>
+  <nav class="nav-stack">
+    <a class="nav-item active" href="index.html"><i class="bi bi-house-fill"></i>Início</a>
+    <a class="nav-item" href="pages/games.html"><i class="bi bi-controller"></i>Jogos</a>
+    <a class="nav-item" href="pages/decks.html"><i class="bi bi-collection-fill"></i>Meus decks</a>
+    <a class="nav-item" href="pages/create.html"><i class="bi bi-plus-circle-fill"></i>Criar deck</a>
+    <a class="nav-item" href="pages/settings.html"><i class="bi bi-gear-fill"></i>Configurações</a>
+  </nav>
+  <div class="sidebar-bottom">
+    <div class="mini-progress"><div class="d-flex justify-content-between"><span>Nível <b id="sideLevel">1</b></span><span id="sideXp">0 XP</span></div><div class="progress"><div id="sideXpBar" class="progress-bar"></div></div></div>
+    <button class="profile-mini" id="profileBtn"><span class="avatar">R</span><span><b>Estudante</b><small>Ver perfil</small></span><i class="bi bi-three-dots"></i></button>
+  </div>
+</aside>
+<main class="main-content">
+<header class="topbar">
+  <button class="icon-btn d-lg-none" id="menuBtn"><i class="bi bi-list"></i></button>
+  <div class="search-box"><i class="bi bi-search"></i><input id="globalSearch" placeholder="Pesquisar decks, assuntos e jogos..."></div>
+  <div class="top-actions"><button class="icon-btn" id="themeBtn" title="Alternar tema"><i class="bi bi-moon-stars-fill"></i></button><div class="wallet"><i class="bi bi-coin"></i><b id="coins">250</b></div><div class="streak"><i class="bi bi-fire"></i><b id="streak">0</b></div><a class="avatar" href="pages/settings.html">R</a></div>
+</header>
+<div class="page-container">
+<section class="hero-card">
+  <div><span class="eyebrow">SEU HUB DE APRENDIZADO</span><h1>Jogue. <span>Aprenda.</span><br>Evolua.</h1><p>Transforme seus flashcards em combustível para jogos rápidos, divertidos e viciantes.</p><div class="hero-actions"><a href="pages/games.html" class="btn btn-recall"><i class="bi bi-controller me-2"></i>Jogar agora</a><a href="pages/create.html" class="btn btn-ghost">Criar deck</a></div></div>
+  <div class="hero-art"><div class="orbit o1"></div><div class="orbit o2"></div><div class="hero-orb"><i class="bi bi-lightning-charge-fill"></i></div><span class="float-badge b1">+25 XP</span><span class="float-badge b2">🔥 Combo</span><span class="float-badge b3">+10 🪙</span></div>
+</section>
+<section class="stats-row"><div class="stat-card"><span class="stat-icon purple"><i class="bi bi-lightning-charge-fill"></i></span><div><small>XP total</small><strong id="totalXp">0</strong></div></div><div class="stat-card"><span class="stat-icon gold"><i class="bi bi-coin"></i></span><div><small>Moedas</small><strong id="totalCoins">250</strong></div></div><div class="stat-card"><span class="stat-icon pink"><i class="bi bi-fire"></i></span><div><small>Sequência</small><strong id="totalStreak">0 dias</strong></div></div><div class="stat-card"><span class="stat-icon blue"><i class="bi bi-check2-circle"></i></span><div><small>Acertos</small><strong id="accuracy">0%</strong></div></div></section>
+<section class="section-head"><div><h2>Continue jogando</h2><p>Escolha um jogo e leve seus decks com você.</p></div><a href="pages/games.html" class="see-all">Ver todos <i class="bi bi-arrow-right"></i></a></section>
+<div class="game-grid" id="featuredGames"></div>
+<section class="section-head mt-5"><div><h2>Seus decks</h2><p>Estude com o que você já criou.</p></div><a href="pages/decks.html" class="see-all">Biblioteca <i class="bi bi-arrow-right"></i></a></section>
+<div id="deckPreview" class="deck-grid"></div>
+</div></main></div>
+<div id="toastHost" class="toast-host"></div>
+<script src="js/storage.js"></script><script src="js/app.js"></script>
+</body></html>
